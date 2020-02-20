@@ -97,12 +97,10 @@ Children:
     - Children: []
       Properties:
         CAN ID: !!robotbuilder.data.properties.ChoicesProperty
-          choices: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11',
-            '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23',
-            '24', '25', '26', '27', '28', '29', '30', '31']
+          choices: *id001
           default: '2'
           name: CAN ID
-          validators: [CANID]
+          validators: *id002
           value: '7'
       Base: Talon FX
       Name: climbFalcon
@@ -138,7 +136,7 @@ Children:
           validators: null
           value: []
         Button: !!robotbuilder.data.properties.ChoicesProperty
-          choices: &id001 ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11',
+          choices: &id003 ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11',
             '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23',
             '24', '25', '26', '27', '28', '29', '30', '31', '32']
           default: '1'
@@ -149,10 +147,10 @@ Children:
           default: None
           name: Command
           type: Command
-          validators: &id002 [TypeDropdownSelected]
+          validators: &id004 [TypeDropdownSelected]
           value: ExtendClimber
         When to Run: !!robotbuilder.data.properties.ChoicesProperty
-          choices: &id003 [whileHeld, whenPressed, whenReleased]
+          choices: &id005 [whileHeld, whenPressed, whenReleased]
           default: whileHeld
           name: When to Run
           validators: null
@@ -169,7 +167,7 @@ Children:
           validators: null
           value: []
         Button: !!robotbuilder.data.properties.ChoicesProperty
-          choices: *id001
+          choices: *id003
           default: '1'
           name: Button
           validators: null
@@ -178,10 +176,10 @@ Children:
           default: None
           name: Command
           type: Command
-          validators: *id002
+          validators: *id004
           value: RetractClimber
         When to Run: !!robotbuilder.data.properties.ChoicesProperty
-          choices: *id003
+          choices: *id005
           default: whileHeld
           name: When to Run
           validators: null
@@ -198,7 +196,7 @@ Children:
           validators: null
           value: []
         Button: !!robotbuilder.data.properties.ChoicesProperty
-          choices: *id001
+          choices: *id003
           default: '1'
           name: Button
           validators: null
@@ -207,10 +205,10 @@ Children:
           default: None
           name: Command
           type: Command
-          validators: *id002
+          validators: *id004
           value: ExtendPiston
         When to Run: !!robotbuilder.data.properties.ChoicesProperty
-          choices: *id003
+          choices: *id005
           default: whileHeld
           name: When to Run
           validators: null
@@ -227,7 +225,7 @@ Children:
           validators: null
           value: []
         Button: !!robotbuilder.data.properties.ChoicesProperty
-          choices: *id001
+          choices: *id003
           default: '1'
           name: Button
           validators: null
@@ -236,10 +234,10 @@ Children:
           default: None
           name: Command
           type: Command
-          validators: *id002
+          validators: *id004
           value: RetractPiston
         When to Run: !!robotbuilder.data.properties.ChoicesProperty
-          choices: *id003
+          choices: *id005
           default: whileHeld
           name: When to Run
           validators: null
@@ -248,20 +246,20 @@ Children:
       Name: retractPistonbutton
     Properties:
       Number: !!robotbuilder.data.properties.ChoicesProperty
-        choices: &id004 ['0', '1', '2', '3', '4', '5']
+        choices: &id006 ['0', '1', '2', '3', '4', '5']
         default: 1
         name: Number
-        validators: &id005 [Joystick]
+        validators: &id007 [Joystick]
         value: '0'
     Base: Joystick
     Name: leftJoy
   - Children: []
     Properties:
       Number: !!robotbuilder.data.properties.ChoicesProperty
-        choices: *id004
+        choices: *id006
         default: 1
         name: Number
-        validators: *id005
+        validators: *id007
         value: '1'
     Base: Joystick
     Name: rightJoy
@@ -444,11 +442,11 @@ Properties:
     name: Export Subsystems, validators: null, value: true}
   Simulation World File: !!robotbuilder.data.properties.StringProperty {default: /usr/share/frcsim/worlds/GearsBotDemo.world,
     name: Simulation World File, validators: null, value: /usr/share/frcsim/worlds/GearsBotDemo.world}
-  Wiring file location: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\harri\',
+  Wiring file location: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\293fi\',
     extension: null, folder: true, name: Wiring file location, validators: null, value: ..\}
-  Export Directory: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\harri\FRCProjects',
+  Export Directory: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\293fi\FRCProjects',
     extension: null, folder: true, name: Export Directory, validators: null, value: ..\}
   Autonomous Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
     name: Autonomous Command, type: Command, validators: null, value: Autonomous Command}
 Base: Robot
-Name: InfiniteRecharge
+Name: ShowBot
