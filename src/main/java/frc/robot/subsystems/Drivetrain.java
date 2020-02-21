@@ -52,8 +52,6 @@ private WPI_TalonSRX rightTalon;
     private double Ldeadband = .15;
     private double Rdeadband = .15;
 
-    private double maxRPM = 6000.;
-
     private final double CLOSED_LOOP_RAMP = 0.5;
     private final double MAX_VELOCITY = 21549;
     private final double VELOCITY_LIMIT_PERCENTAGE = 0.5;
@@ -120,11 +118,9 @@ rightTalon = new WPI_TalonSRX(4);
     }
     // Converts joystick input adjusted to a RPM for the Falcon's PIDF loop to aim for
 
-    public void velocityDrive(Joystick left, Joystick right){
-        double leftPos = left.getY();
-        double rightPos = right.getY();
+    public void velocityDrive(double leftPos, double rightPos, boolean useSlowModifier){
+        
         double retval = 0.0;
-        boolean useSlowModifier = false;
 
         if(Robot.oi.rightJoy.getTrigger()){
             useSlowModifier = true;
