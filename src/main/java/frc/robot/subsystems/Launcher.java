@@ -69,7 +69,7 @@ launcherMotor = new WPI_TalonSRX(10);
 
     }
     public void launcherOn(){
-        launcherMotor.set(0.75);
+        launcherMotor.set(-0.70);
     }
     public void launcherOff(){
         launcherMotor.set(0);
